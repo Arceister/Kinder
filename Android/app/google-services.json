@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "75354002862",
+    "project_id": "kinder-b688d",
+    "storage_bucket": "kinder-b688d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75354002862:android:5678fc52cfb8bfcdac643f",
+        "android_client_info": {
+          "package_name": "com.davahamka.kinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75354002862-fnfria14q3lvv3jjkfkj523i1kvqsjra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0PynE5lOjMR9Rs3Uv5MnZOuloZXlGwU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75354002862-fnfria14q3lvv3jjkfkj523i1kvqsjra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
