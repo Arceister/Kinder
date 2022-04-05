@@ -1,5 +1,6 @@
 package com.davahamka.kinder.presentation.donate
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
@@ -10,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import com.davahamka.kinder.R
 import com.davahamka.kinder.dummy.DonateDummy
+import com.davahamka.kinder.presentation.donate.components.ModalMethodSelection
 import com.davahamka.kinder.presentation.home.components.ModalBottomShare
 import com.davahamka.kinder.presentation.home.components.ModalDetailReceiver
 import com.davahamka.kinder.static.NearestDataStatic
@@ -25,7 +27,9 @@ import kotlinx.coroutines.launch
 fun DonateMapScreen(navController: NavHostController) {
         val singapore =  LatLng(-7.9354264,112.6239592)
 
-        val modalBottomSheetState = rememberModalBottomSheetState(
+
+
+    val modalBottomSheetState = rememberModalBottomSheetState(
             ModalBottomSheetValue.Hidden
         )
 
@@ -38,7 +42,7 @@ fun DonateMapScreen(navController: NavHostController) {
         ModalBottomSheetLayout(
             sheetState = modalBottomSheetState,
             sheetContent = {
-                ModalDetailReceiver(navController)
+                    ModalDetailReceiver(navController)
         }) {
             GoogleMap(
                 modifier = Modifier.fillMaxSize(),

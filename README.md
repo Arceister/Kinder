@@ -11,6 +11,22 @@
 - [Machine Learning](./Machine%20Learning)
 <br/>
 
+## How to Run Application:
+
+## Android:
+1. Open Android Studio
+2. Copy [Android Repository](https://github.com/davahamka/Kinder) in Android Studio. Wait until the build finisih.
+3. Application Ready to Start
+<br/>
+
+## Backend:
+**You can access [this](https://kinder-api.herokuapp.com/) API instead of running locally**
+<br/>
+
+## Machine Learning:
+**You can access [this](https://kinder-ml.herokuapp.com/) API instead of running locally**
+<br/>
+
 ## Tech Stack:
 
 ### Android:
