@@ -17,6 +17,11 @@
 1. Open Android Studio
 2. Copy [Android Repository](https://github.com/davahamka/Kinder) in Android Studio. Wait until the build finisih.
 3. Application Ready to Start
+4. For Login, use this Credentials:
+```
+Email: testestes@gmail.com
+Password: Dev12345
+```
 <br/>
 
 ## Backend:
