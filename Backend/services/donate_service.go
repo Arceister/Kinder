@@ -32,9 +32,13 @@ func (s DonateService) InsertDonate(user models.User, donate models.Donate) erro
 	return err
 }
 
-func (s DonateService) TakeDonation(user models.User, donate models.Donate) error {
-	err := s.repository.TakeDonate(user, donate)
-	return err
+func (s DonateService) TakeDonation(
+	quantity uint,
+	user models.User,
+	donate models.Donate,
+	donatur models.User) (uint, error) {
+	quantity, err := s.repository.TakeDonate(quantity, user, donate, donatur)
+	return quantity, err
 }
 
 func (s DonateService) UpdateDonate(donateId uint, donate models.Donate) error {
@@ -57,6 +61,11 @@ func (s DonateService) DeleteDonate(donateId uint) error {
 		return err
 	}
 
-	deleteErr := s.repository.Delete(donateId, donateNew)
+	deleteErr := s.repository.Delete(donateNew)
 	return deleteErr
+}
+
+func (s DonateService) GetUserByDonateId(donateId uint) (uint, error) {
+	userDonationId, err := s.repository.GetUserDonationBased(donateId)
+	return userDonationId, err
 }

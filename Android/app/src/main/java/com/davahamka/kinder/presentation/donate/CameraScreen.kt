@@ -46,13 +46,12 @@ import com.davahamka.kinder.presentation.ui.component.TopBarDescription
 import com.davahamka.kinder.presentation.ui.theme.*
 import com.davahamka.kinder.static.NutritionSummaryDataStatic
 import com.google.accompanist.flowlayout.FlowRow
-import com.google.mlkit.vision.objects.ObjectDetection
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions
 
 @Composable
 fun CameraScreen(modifier: Modifier = Modifier, navController: NavController, viewModel: DonateFormViewModel = hiltViewModel()) {
     val emptyImageUri = Uri.parse("file://dev/null")
     var imageUri by remember { mutableStateOf(emptyImageUri) }
+    var label by remember { mutableStateOf("") }
 
     var expanded by remember { mutableStateOf(false)}
     val list = listOf("Kilogram", "Piece", "Serving")
@@ -97,12 +96,12 @@ fun CameraScreen(modifier: Modifier = Modifier, navController: NavController, vi
 //                                    .width(140.dp),
 //                                contentDescription = "Captured image"
 //                            )
-                            Image(painter = painterResource(id = R.drawable.img_buah_naga), contentDescription = null, modifier = Modifier
+                            Image(painter = painterResource(id = R.drawable.r_img_banana), contentDescription = null, modifier = Modifier
                                 .width(78.dp)
                                 .height(78.dp))
                             Spacer(modifier = Modifier.width(10.dp))
                             Column() {
-                                Text(text = "Dragon Fruit", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                                Text(text = label, fontSize = 16.sp, fontWeight = FontWeight.Bold)
                                 Text(text = "234 kal")
                             }
                         }
@@ -148,13 +147,24 @@ fun CameraScreen(modifier: Modifier = Modifier, navController: NavController, vi
                             NutritionSummaryDataStatic.dataNutrionSummary.forEach {
                                 ItemInformationGizi(it)
                             }
+                            Column(
+                                modifier = Modifier
+                                    .padding(end = 16.dp)
+                                    .border(width = 1.dp,color = Color.Black, shape = RoundedCornerShape(16.dp))
+                                    .width(90.dp)
+                                    .background(shape = RoundedCornerShape(24.dp), color = Color.White), horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(text = "More")
+                            }
                         }
                     }
 
                     Column(
-                        modifier = Modifier.padding(18.dp)
+                        modifier = Modifier
+                            .padding(18.dp)
+                            .background(color = Color(0xFEF2D5))
                     ) {
-                        Text(text = "Foods that are not for people with the following diseases")
+                        Text(text = "These foods are not for people with the problem health below")
 
                         FlowRow(
                             modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
@@ -296,8 +306,9 @@ fun CameraScreen(modifier: Modifier = Modifier, navController: NavController, vi
     } else {
         CameraCapture(
             modifier = modifier,
-            onImageFile = { file ->
+            onImageFile = { file, value ->
                 imageUri = file.toUri()
+                label = value
             }
         )
     }

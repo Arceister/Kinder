@@ -50,7 +50,7 @@ fun ModalDetailItem(navController: NavController) {
                 ) {
                     Column() {
                         AsyncImage(
-                            model = "https://res.cloudinary.com/dk0z4ums3/image/upload/v1616414949/attached_image/temukan-manfaat-buah-naga-yang-sarat-nutrisi.jpg",
+                            model = "https://cdn.antaranews.com/cache/800x533/2017/05/20170508pisang.jpg",
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             modifier = Modifier
@@ -67,13 +67,13 @@ fun ModalDetailItem(navController: NavController) {
                         horizontalAlignment = Alignment.Start,
                         verticalArrangement = Arrangement.Top
                     ) {
-                        Text(text = "Fresh Dragon Fruit", color = Black1, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                        Text(text = "Good Quality Banana", color = Black1, fontSize = 16.sp, fontWeight = FontWeight.Bold)
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.padding(top = 4.dp)
                         ) {
                             Icon(imageVector = Icons.Filled.CalendarToday, contentDescription = null, modifier = Modifier.size(12.dp))
-                            Text(text = "25 Maret 20222", modifier = Modifier.padding(start = 6.dp), fontSize = 12.sp)
+                            Text(text = "4 Juni 2022", modifier = Modifier.padding(start = 6.dp), fontSize = 12.sp)
                         }
                         Spacer(modifier = Modifier.height(8.dp))
                         Row(
@@ -105,7 +105,7 @@ fun ModalDetailItem(navController: NavController) {
                     ) {
                         Row() {
                             AsyncImage(
-                                model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaXrFMnQrS3cdGFTB-UpG-5qMGMQyybPu7xg&usqp=CAU",
+                                model = "https://mer-c.org/images/2020/11-dr-siti-fadilah-supari-Sp-JP.jpg",
                                 contentDescription = null,
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier
@@ -115,13 +115,13 @@ fun ModalDetailItem(navController: NavController) {
                             )
                             Spacer(modifier = Modifier.padding(start = 10.dp))
                             Column() {
-                                Text(text = "Billy Haffas", fontWeight = FontWeight.Bold)
+                                Text(text = "Siti", fontWeight = FontWeight.Bold)
                                 Row(
                                     verticalAlignment = Alignment.CenterVertically,
                                     modifier = Modifier.padding(top = 4.dp)
                                 ) {
                                     Icon(imageVector = Icons.Filled.PinDrop, contentDescription = null, tint = PrimaryColor, modifier = Modifier.size(11.dp))
-                                    Text(text = "Lowokwaru, Kota Malang", fontSize = 11.sp)
+                                    Text(text = "Jebres, Surakarta", fontSize = 11.sp)
                                 }
                                 Row(
                                     verticalAlignment = Alignment.CenterVertically,
@@ -149,7 +149,7 @@ fun ModalDetailItem(navController: NavController) {
                 Column(modifier = Modifier.padding(bottom = 20.dp)) {
                     Text(text = "Description",  fontSize=18.sp, fontWeight= FontWeight.Bold, modifier = Modifier.padding(horizontal = 24.dp))
                     Spacer(modifier = Modifier.height(6.dp))
-                    Text(modifier = Modifier.padding(horizontal = 24.dp),lineHeight = 24.sp ,color = Color(0xFF565656),text = "Saya ingin membagikan buah naga asli dari kebun kami sendiri secara gratis. Hasil panen buah naga di kebun saya saat ini sedang melimpah jadi saya ingin membagikan sebagiannya secara gratis hari ini. Bagi yang berminat bisa langsung ke rumah saya untuk mengambilnya ya. Untuk detail alamat rumah bisa kontak saya melalui chat ya.")
+                    Text(modifier = Modifier.padding(horizontal = 24.dp),lineHeight = 24.sp ,color = Color(0xFF565656),text = "Saya ingin membagikan buah pisang dari toko saya sendiri secara gratis. karena jika saya jual besok buah ini tidak layak makan dan hampir busuk. Bagi yang berminat bisa langsung ke rumah saya untuk mengambilnya ya. Untuk detail alamat rumah bisa kontak saya melalui chat ya.")
                 }
 
                 

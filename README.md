@@ -17,11 +17,6 @@
 1. Open Android Studio
 2. Copy [Android Repository](https://github.com/davahamka/Kinder) in Android Studio. Wait until the build finisih.
 3. Application Ready to Start
-4. For Login, use this Credentials:
-```
-Email: testestes@gmail.com
-Password: Dev12345
-```
 <br/>
 
 ## Backend:
@@ -29,7 +24,7 @@ Password: Dev12345
 <br/>
 
 ## Machine Learning:
-**You can access [this](https://kinder-ml.herokuapp.com/) API instead of running locally**
+You can run the .ipynb with Training Data here, to create the Model.
 <br/>
 
 ## Tech Stack:
@@ -38,7 +33,7 @@ Password: Dev12345
 - Kotlin (Main Programming Language)
 - Jetpack Compose (For UI Kit)
 - Google Maps
-- ML Kit
+- TFLite
 - Firebase
 
 ### Backend:
@@ -48,8 +43,6 @@ Password: Dev12345
 - Supabase (Database Cloud Provider)
 
 ### Machine Learning:
-- Python (Main Programming Language)
-- FastAPI (Web Framework)
-- Tensorflow (Load the Model Created with Teachable Machine)
-- Teachable Machine (To Create Food Model)
-- Heroku (Cloud Provider)
+- Jupyter Notebook
+- Python
+- Tensorflow (With Object Detection Module)
